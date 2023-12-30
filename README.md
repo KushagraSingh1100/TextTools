@@ -8,4 +8,4 @@ A text manipulation tool which servers many usefull features like ability to:
 
 =>Convert the inputted text to uppercase or lower case.
 
-This tool was made for learning purpose and the project is under development and more features will pushed in the near future as I progress.
+This tool was made for learning purpose and some of the features are removed due to limitations of github deployment and the project is under development and more features will pushed in the near future as I progress.
