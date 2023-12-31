@@ -3,8 +3,8 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Textarea from "./components/Textarea";
 import Alert from "./components/Alert";
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//import About from "./components/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/About";
 function App() {
   const togglemode = () => {
     if (mode === "light") {
@@ -33,17 +33,16 @@ function App() {
 
   return (
     <>
-      {/*<Router>*/}
-      <Navbar title="TextTools" mode={mode} togglemode={togglemode} />
-      <Alert alert={alert} />
-      <div className="container">
-        <Textarea mode={mode} alert={alerts} />
-        {/*<Routes>
+      <Router>
+        <Navbar title="TextTools" mode={mode} togglemode={togglemode} />
+        <Alert alert={alert} />
+        <div className="container">
+          <Routes>
             <Route path="/about" element={<About mode={mode} />} />
             <Route path="/" element={<Textarea mode={mode} alert={alerts} />} />
-  </Routes>*/}
-      </div>
-      {/* </Router> */}
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
