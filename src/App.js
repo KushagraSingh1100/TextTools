@@ -38,8 +38,11 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
           <Routes>
+            <Route
+              path="/TextTools"
+              element={<Textarea mode={mode} alert={alerts} />}
+            />
             <Route path="/about" element={<About mode={mode} />} />
-            <Route path="/" element={<Textarea mode={mode} alert={alerts} />} />
           </Routes>
         </div>
       </Router>
