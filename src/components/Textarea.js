@@ -57,16 +57,16 @@ export default function Textarea(props) {
           rows="8"
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
         Convert To UpperCase
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleDownClick}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleDownClick}>
         Convert To LowerCase
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleClear}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleClear}>
         Clear Text
       </button>
-      <button className="btn btn-primary mx-2" onClick={handleCopy}>
+      <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
         Copy Text
       </button>
       <div
@@ -77,8 +77,13 @@ export default function Textarea(props) {
       >
         <h2>Text Summary</h2>
         <p>
-          Your Text have {text === "" ? "0" : text.split(" ").length} words and{" "}
-          {text.length} characters
+          Your Text have{" "}
+          {text === ""
+            ? "0"
+            : text.split(" ").filter((element) => {
+                return element.length !== 0;
+              }).length}{" "}
+          words and {text.length} characters
         </p>
       </div>
     </div>
